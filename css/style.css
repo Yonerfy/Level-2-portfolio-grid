@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c3cfe2), to(#c3cfe2));
+  background: linear-gradient(#c3cfe2, #c3cfe2);
+  margin: 0;
+}
+
+.container {
+  padding: 0 50px;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: '. X .' 'A B C' 'D E F' 'H . .';
+  grid-gap: 50px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.container__card {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: A;
+  background: url("/img/yonerfy.jpg");
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.container__button {
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  display: none;
+}
+
+.container__card:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.container__card:hover button {
+  display: block;
+}
+
+.container__card-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: A;
+}
+
+.container__card-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: B;
+}
+
+.container__card-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: C;
+}
+
+.container__card-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: D;
+}
+
+.container__card-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: E;
+}
+
+.container__card-6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: F;
+}
+
+.container__card-7 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: H;
+}
+
+.container h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: X;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 900px;
+    grid-template: 'X .' 'A B' 'C D' 'E F' 'H .';
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 500px;
+    grid-template: 'X' 'A'  'B' 'C'  'D' 'E' 'F' 'H';
+  }
+}
+
+.page-footer {
+  max-height: 100px;
+  width: 100vw;
+  background-color: #222;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 265px;
+  grid-column: 1 / -1;
+}
+/*# sourceMappingURL=style.css.map */

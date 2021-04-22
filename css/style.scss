@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#c3cfe2, #c3cfe2 );
+    margin: 0;
+}
+
+.container{
+    padding: 0 50px;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        '. X .'
+        'A B C'
+        'D E F'
+        'H . .'
+    ;
+    &__card{ 
+        grid-area: A;
+        background: url('/img/yonerfy.jpg'); 
+        width: 300px;
+        height: 400px;
+        background-size: cover; 
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+    }
+    &__button {
+        width: 100px;
+        height: 30px;
+        font-weight: bold;
+        display: none;
+}
+    &__card:hover{
+        background: rgba($color: #000000, $alpha: .9);
+        button {display: block;}
+    }
+    &__card-1{grid-area: A;}
+    &__card-2{ grid-area: B;}
+    &__card-3{ grid-area: C;}
+    &__card-4{ grid-area: D;}
+    &__card-5{ grid-area: E;}
+    &__card-6{ grid-area: F;}
+    &__card-7{ grid-area: H;}
+    grid-gap: 50px;
+    margin: 0 auto;
+    width: 1200px;
+   
+    h1{
+        grid-area: X ;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container{
+        width: 900px;
+        grid-template: 
+        'X .'
+        'A B'
+        'C D'
+        'E F'
+        'H .'
+    ;
+    }
+       
+
+}
+
+@media (max-width: 850px) {
+    .container{
+        width: 500px;
+        grid-template: 
+        'X'
+        'A' 
+        'B'
+        'C' 
+        'D'
+        'E'
+        'F'
+        'H'
+    ;
+    }
+       
+
+}
+.page-footer{
+    max-height: 100px;
+    width: 100vw;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 265px;
+    grid-column: 1 / -1;
+}
